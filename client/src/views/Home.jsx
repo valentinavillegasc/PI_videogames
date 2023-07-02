@@ -11,15 +11,15 @@ import {
   orderByRating,
 } from "../redux/actions";
 import { useSelector } from "react-redux";
-
 import NavBar from "../components/NavBar";
+
 function Home() {
   const videogames = useSelector((state) => state.videogames);
 
   const dispatch = useDispatch();
   //paginado
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(15);
+  const [itemsPerPage] = useState(15);
 
   // Lógica de paginado
   const indexOfLastItem = currentPage * itemsPerPage;

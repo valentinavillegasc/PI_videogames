@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Landing from "./views/Landing";
 import Home from "./views/Home";
 import Form from "./views/Form";

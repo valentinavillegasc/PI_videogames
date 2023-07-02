@@ -68,7 +68,7 @@ const rootReducer = (state = initialState, action) => {
           videogames: state.allVideogames,
         };
       }
-
+      break;
     //Order
     case ORDER_BY_NAME:
       const isAscending = action.payload === "asc";

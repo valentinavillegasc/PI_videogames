@@ -1,15 +1,13 @@
 import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
 import style from "./Estilos/NavBar.module.css";
-import { useDispatch } from "react-redux";
 
+/* import logo from "../utils/"; */
 function NavBar() {
   return (
     <div className={style.navBar}>
       <SearchBar />
-      <div className={style.logo}>
-        <img src="./utils/Logo.png" alt="logo" />
-      </div>
+      <div className={style.logo}>{/*  <img src={logo} alt="logo" /> */}</div>
       <div>
         <Link to="/home">
           <button className={style.homeButton}>

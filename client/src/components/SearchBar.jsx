@@ -1,4 +1,3 @@
-import { useParams } from "react-router-dom";
 import style from "./Estilos/SearchBar.module.css";
 import { useDispatch } from "react-redux";
 import { getVideogameByName } from "../redux/actions";
