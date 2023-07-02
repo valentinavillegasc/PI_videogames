@@ -1,0 +1,47 @@
+.detail {
+  margin: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  border-radius: 51px;
+  background-color: rgba(0, 0, 0, 0.384);
+  color: aliceblue;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  line-height: 1.5rem;
+  color: white;
+  border-radius: 10px;
+}
+.info2 {
+  background-color: rgba(0, 0, 0, 0.608);
+  border-radius: 10px;
+  width: 400px;
+}
+.data {
+  width: 10px;
+}
+.description {
+  width: 1100px;
+  padding: 10px;
+  margin: 10px;
+  font-family: sans-serif;
+  font-weight: 50;
+  line-height: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.608);
+  color: white;
+  border-radius: 10px;
+  font-size: small;
+}
+
+.img {
+  border-radius: 50px;
+  margin: 10px;
+  width: 500px;
+}

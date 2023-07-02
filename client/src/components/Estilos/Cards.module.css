@@ -1,0 +1,9 @@
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 20px;
+  flex-wrap: wrap;
+  background-color: #1513426e;
+  border-radius: 20px;
+}

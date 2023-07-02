@@ -1,0 +1,49 @@
+.formulario {
+  margin: 50px;
+  padding: 10px;
+  border-radius: 51px;
+  background-color: rgba(0, 0, 0, 0.384);
+  color: aliceblue;
+  /*  display: flex;
+  flex-direction: column;
+
+  justify-content: space-around;
+  width: 500px;
+  background-color: aqua; */
+  background-image: url(C:\Users\Valentina\OneDrive\Escritorio\PI-Videogames-main\client\src\utils\Landing.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.checkContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.479);
+}
+.genresTitle {
+  margin: 70px;
+}
+.genres {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.platformTitle {
+  margin: 70px;
+}
+.platforms {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

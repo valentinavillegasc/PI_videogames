@@ -1,0 +1,56 @@
+.home {
+  height: 90vh;
+  background-color: #633a72;
+}
+.title {
+  margin: 0px;
+  font-size: x-small;
+  color: white;
+}
+.filtros {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.genres {
+  font-size: small;
+  text-align: center;
+  width: 100px;
+  height: 30px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.732);
+  color: whitesmoke;
+}
+.source {
+  font-size: small;
+  text-align: center;
+  width: 100px;
+  height: 30px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.732);
+  color: whitesmoke;
+}
+.alpha {
+  font-size: small;
+  text-align: center;
+  width: 100px;
+  height: 30px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.732);
+  color: whitesmoke;
+}
+
+.rating {
+  font-size: small;
+  text-align: center;
+  width: 100px;
+  height: 30px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.732);
+  color: whitesmoke;
+}

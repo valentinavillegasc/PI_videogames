@@ -1,0 +1,39 @@
+.landing {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(C:\Users\Valentina\OneDrive\Escritorio\PI-Videogames-main\client\src\utils\Landing.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.title {
+  color: white;
+  font-size: 90px;
+}
+/* .subtitle {
+  color: white;
+  font-size: 30px;
+} */
+
+.startButton {
+  color: white;
+  margin-bottom: 70px;
+  width: 150px;
+  height: 60px;
+  border: 3px solid #5f10815d;
+  border-radius: 45px;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: #37116048;
+  font-size: 1.2em;
+  font-weight: 550;
+}
+
+.startButton:hover {
+  background: #106a45;
+  color: white;
+  font-size: 1.5em;
+}

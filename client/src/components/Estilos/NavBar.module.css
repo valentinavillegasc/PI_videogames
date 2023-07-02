@@ -1,0 +1,96 @@
+.navBar {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row-reverse;
+  background-color: #1513426e;
+  border-radius: 30px;
+}
+
+.logo {
+  height: 110px;
+  display: flex;
+}
+
+/* HOME BUTTON */
+
+.homeButton {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.384);
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 17px;
+  padding: 16px;
+  width: 130px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.homeButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.homeButton span:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+}
+
+.homeButton:hover span {
+  padding-right: 15px;
+}
+
+.homeButton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* CREATE BUTTON */
+
+.createButton {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.384);
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 17px;
+  padding: 16px;
+  width: 130px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.createButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.createButton span:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+}
+
+.createButton:hover span {
+  padding-right: 15px;
+}
+
+.createButton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
