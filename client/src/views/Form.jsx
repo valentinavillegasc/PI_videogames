@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
-
 import style from "./Estilos/Form.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { getGenres } from "../redux/actions";
-
 import validation from "./validations/validations";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -88,7 +86,7 @@ function Form() {
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault(); //para que la pagina no se recarge y se pierda todo
+    event.preventDefault();
     axios
       .post("http://localhost:3001/videogames/", form)
       .then((res) => alert("Created!"))
@@ -147,6 +145,7 @@ function Form() {
             onChange={handleChange}
           />
         </div>
+        <h4>Please check the genres and platforms releated</h4>
         <div className={style.checkContainer}>
           <h2 className={style.genresTitle}>Genres</h2>
           <div className={style.genres}>
@@ -185,8 +184,7 @@ function Form() {
             })}
           </div>
         </div>
-        {errors.genres && <p>{errors.genres}</p>}
-        {errors.platforms && <p>{errors.platforms}</p>}
+
         <button type="submit">Create</button>
       </form>
     </div>

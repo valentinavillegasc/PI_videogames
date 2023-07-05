@@ -1,12 +1,14 @@
 import React, { useEffect } from "react";
 import style from "./Estilos/Detail.module.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getVideogame, cleanDetail } from "../redux/actions";
 import { useParams } from "react-router-dom";
+import NavBar from "../components/NavBar";
 
-function Detail({ game }) {
+function Detail() {
+  //Hooks
+  const game = useSelector((state) => state.videogameDetail);
   const params = useParams();
-
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getVideogame(params.id));
@@ -17,38 +19,41 @@ function Detail({ game }) {
   }, [dispatch, params.id]);
 
   return (
-    <div className={style.detail}>
-      <h1>{game.name}</h1>
+    <div>
+      <NavBar />
+      <div className={style.detail}>
+        <h1>{game.name}</h1>
 
-      <div className={style.info}>
-        <img src={game.image} alt={game.name} className={style.img} />
-        <div className={style.info2}>
-          <p>
-            <h4>Rating</h4>
-            {game.rating}
-          </p>
+        <div className={style.info}>
+          <img src={game.image} alt={game.name} className={style.img} />
+          <div className={style.info2}>
+            <p>
+              <h4>Rating</h4>
+              {game.rating}
+            </p>
 
-          <p>
-            <h4>Genres</h4>
-            {game.created
-              ? game.genres.map((gam) => gam.name).join(" - ")
-              : game.genres?.join(" - ")}
-          </p>
+            <p>
+              <h4>Genres</h4>
+              {game.created
+                ? game.genres.map((gam) => gam.name).join(" - ")
+                : game.genres?.join(" - ")}
+            </p>
 
-          <p>
-            <h4>Released</h4>
-            {game.released}
-          </p>
+            <p>
+              <h4>Released</h4>
+              {game.released}
+            </p>
 
-          <p>
-            <h4>Platforms</h4>
-            {game.platforms?.join(" - ")}
-          </p>
+            <p>
+              <h4>Platforms</h4>
+              {game.platforms?.join(" - ")}
+            </p>
+          </div>
         </div>
-      </div>
-      <div className={style.description}>
-        <h2>About</h2>
-        <p dangerouslySetInnerHTML={{ __html: game?.description }}></p>
+        <div className={style.description}>
+          <h2>About</h2>
+          <p dangerouslySetInnerHTML={{ __html: game?.description }}></p>
+        </div>
       </div>
     </div>
   );

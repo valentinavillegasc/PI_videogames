@@ -12,11 +12,13 @@
 .title {
   color: white;
   font-size: 90px;
+  margin-top: 0px;
 }
-/* .subtitle {
-  color: white;
-  font-size: 30px;
-} */
+
+.logo {
+  width: 120px;
+  margin: 0px;
+}
 
 .startButton {
   color: white;

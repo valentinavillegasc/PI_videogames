@@ -12,7 +12,6 @@ genresRouter.get("/", async (req, res) => {
   );
   try {
     let gameGenre = apiGenres.data.results.map((genre) => genre.name);
-    /*  const gameGenre = genres.flatMap((diet) => diet); */
     gameGenre.forEach((genre) => {
       Genres.findOrCreate({
         where: { name: genre },

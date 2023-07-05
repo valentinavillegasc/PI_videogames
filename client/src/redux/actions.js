@@ -13,9 +13,9 @@ import axios from "axios";
 
 export const getVideogames = () => {
   return async function (dispatch) {
-    const infoGames = await axios.get(`http://localhost:3001/videogames`, {});
+    const infoGames = await axios.get(`http://localhost:3001/videogames`);
 
-    return dispatch({ type: GET_VIDEOGAMES, payload: infoGames.data });
+    dispatch({ type: GET_VIDEOGAMES, payload: infoGames.data });
   };
 };
 
@@ -36,16 +36,6 @@ export const getVideogameByName = (name) => {
     dispatch({ type: GET_VIDEOGAME_NAME, payload: game });
   };
 };
-
-/* export const getVideogameByName = (name) => {
-  return async function (dispatch) {
-    const response = await fetch(
-      `http://localhost:3001/videogames/?name=${name}`
-    );
-    const game = await response.json();
-    dispatch({ type: GET_VIDEOGAME_NAME, payload: game });
-  };
-}; */
 
 export const getGenres = () => {
   return async function (dispatch) {

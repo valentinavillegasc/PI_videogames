@@ -1,5 +1,4 @@
 const { Videogame, Genres } = require("../db");
-const { Op } = require("sequelize");
 
 const createVideogame = async (videogame) => {
   const { id, name, description, platforms, image, released, rating, genres } =
@@ -21,8 +20,6 @@ const createVideogame = async (videogame) => {
   let findGenres = await Genres.findAll({
     where: {
       name: genres,
-      //name: { [Op.in]: genres },
-      //name: { [Op.iLike]: `%${genres}%` },
     },
   });
 

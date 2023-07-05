@@ -8,9 +8,15 @@
   border-radius: 30px;
 }
 
+.name {
+  color: #ffffff;
+  margin-top: 35px;
+}
+
 .logo {
   height: 110px;
   display: flex;
+  text-decoration: none;
 }
 
 /* HOME BUTTON */

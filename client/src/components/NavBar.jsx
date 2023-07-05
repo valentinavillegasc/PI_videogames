@@ -7,7 +7,16 @@ function NavBar() {
   return (
     <div className={style.navBar}>
       <SearchBar />
-      <div className={style.logo}>{/*  <img src={logo} alt="logo" /> */}</div>
+      <Link to="/home">
+        <div className={style.logo}>
+          <h1 className={style.name}>GAMESTACK</h1>
+          <img
+            src=" https://chpic.su/_data/stickers/p/PacmanSPACK/PacmanSPACK_004.webp"
+            alt="logo"
+          />
+        </div>
+      </Link>
+
       <div>
         <Link to="/home">
           <button className={style.homeButton}>

@@ -14,28 +14,23 @@ import { useSelector } from "react-redux";
 import NavBar from "../components/NavBar";
 
 function Home() {
-  const videogames = useSelector((state) => state.videogames);
-
-  const dispatch = useDispatch();
-  //paginado
-  const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(15);
-
-  // Lógica de paginado
-  const indexOfLastItem = currentPage * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = videogames.slice(indexOfFirstItem, indexOfLastItem);
-
-  const paginate = (pageNumber) => {
-    setCurrentPage(pageNumber);
-  };
-
   //Hooks
-
+  const videogames = useSelector((state) => state.videogames);
+  const dispatch = useDispatch();
   useEffect(() => {
     //cuando el componente se monta
     dispatch(getVideogames());
   }, [dispatch]);
+
+  //paginado
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(15);
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = videogames.slice(indexOfFirstItem, indexOfLastItem);
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
 
   //HANDLERS
   //Filters

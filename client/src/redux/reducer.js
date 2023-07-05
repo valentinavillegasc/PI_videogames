@@ -33,6 +33,7 @@ const rootReducer = (state = initialState, action) => {
 
     case CLEAN_DETAIL:
       return { ...state, videogameDetail: {} };
+
     //Filters
     case FILTER_BY_GENRE:
       if (action.payload === "All") {

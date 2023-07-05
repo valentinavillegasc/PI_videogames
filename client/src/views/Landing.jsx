@@ -5,13 +5,14 @@ import style from "./Estilos/Landing.module.css";
 function Landing() {
   return (
     <div className={style.landing}>
+      <img
+        className={style.logo}
+        src="https://chpic.su/_data/stickers/p/PacmanSPACK/PacmanSPACK_004.webp"
+        alt="logo"
+      />
       <h1 className={style.title}>GAMESTACK</h1>
-      {/*   <h2 className={style.subtitle}>
-        Welcome to your beloved video game collection!
-      </h2> */}
-
       <Link to="/home">
-        <button className={style.startButton}>Let's go!</button>
+        <button className={style.startButton}>Open library!</button>
       </Link>
     </div>
   );

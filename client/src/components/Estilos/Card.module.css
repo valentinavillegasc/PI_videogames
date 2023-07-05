@@ -8,9 +8,13 @@
   margin: 20px;
   color: aliceblue;
 }
-
+.name {
+  text-decoration: none;
+  color: aliceblue;
+  font-weight: bold;
+}
 .photo {
   border-radius: 15px;
   margin-top: 10px;
-  width: 200px; /* Establece el ancho deseado */
+  width: 200px;
 }
