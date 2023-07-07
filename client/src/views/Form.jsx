@@ -108,7 +108,7 @@ function Form() {
             value={form.name}
             onChange={handleChange}
           />
-          {errors.name && <p>{errors.name}</p>}
+          {errors.name && <p className={style.errors}>{errors.name}</p>}
 
           <label htmlFor="">Game image: </label>
           <input
@@ -117,7 +117,7 @@ function Form() {
             value={form.image}
             onChange={handleChange}
           />
-          {errors.image && <p>{errors.image}</p>}
+          {errors.image && <p className={style.errors}>{errors.image}</p>}
 
           <label htmlFor="">Game description: </label>
           <textarea
@@ -125,16 +125,18 @@ function Form() {
             name="description"
             onChange={handleChange}
           />
-          {errors.description && <p>{errors.description}</p>}
+          {errors.description && (
+            <p className={style.errors}>{errors.description}</p>
+          )}
 
           <label htmlFor="">Released date: </label>
           <input
-            type="text"
+            type="date"
             name="released"
             value={form.released}
             onChange={handleChange}
           />
-          {errors.released && <p>{errors.released}</p>}
+          {errors.released && <p className={style.errors}>{errors.released}</p>}
 
           <label htmlFor="raiting">Raiting</label>
           <input

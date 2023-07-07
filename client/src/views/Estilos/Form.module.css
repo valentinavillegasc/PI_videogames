@@ -48,6 +48,9 @@
   justify-content: space-around;
 }
 
+.errors {
+  color: red;
+}
 /* submit button */
 
 .button {
