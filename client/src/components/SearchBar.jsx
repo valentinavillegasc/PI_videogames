@@ -11,7 +11,9 @@ function SearchBar() {
   //Handlers
   const onSearch = (event) => {
     event.preventDefault();
-    dispatch(getVideogameByName(search));
+    dispatch(getVideogameByName(search))
+      .then((res) => res)
+      .catch((err) => alert("Sorry we don't have that game"));
   };
   const handleChange = (event) => {
     setSearch(event.target.value);

@@ -90,7 +90,7 @@ function Form() {
     axios
       .post("http://localhost:3001/videogames/", form)
       .then((res) => alert("Created!"))
-      .catch((err) => alert(err));
+      .catch((err) => alert("The creation failed"));
     navigate("/home");
   };
 
