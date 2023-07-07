@@ -1,7 +1,7 @@
 const { Router } = require("express");
-const getVideogames = require("../controllers/01-getVideogames");
-const getVideogameById = require("../controllers/02-getVideogameById");
-const createVideogame = require("../controllers/03-createVideogame");
+const getVideogames = require("../controllers/getVideogames");
+const getVideogameById = require("../controllers/getVideogameById");
+const createVideogame = require("../controllers/createVideogame");
 
 const videogameRouter = Router();
 

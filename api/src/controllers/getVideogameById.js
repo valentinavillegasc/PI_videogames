@@ -35,6 +35,18 @@ const getVideogameById = async (id, source) => {
       ],
       include: { model: Genres },
     });
+    videogame = {
+      id: videogame.id,
+      name: videogame.name,
+      description: videogame.description
+        ? videogame.description
+        : "sin descripcion",
+      platforms: videogame.platforms,
+      image: videogame.background_image,
+      released: videogame.released,
+      rating: videogame.rating,
+      genres: videogame.genres.map((genre) => genre.name),
+    };
   }
   return videogame;
 };
