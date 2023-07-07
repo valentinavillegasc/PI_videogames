@@ -186,7 +186,12 @@ function Form() {
           </div>
         </div>
 
-        <button type="submit">Create</button>
+        <button
+          className={style.button}
+          type="submit"
+          disabled={Object.values(errors).some((error) => error !== "")}>
+          Create
+        </button>
       </form>
     </div>
   );
