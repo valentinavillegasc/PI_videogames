@@ -4,9 +4,11 @@ import { getVideogameByName } from "../redux/actions";
 import { useState } from "react";
 
 function SearchBar() {
+  //Hooks
   const dispatch = useDispatch();
   const [search, setSearch] = useState("");
 
+  //Handlers
   const onSearch = (event) => {
     event.preventDefault();
     dispatch(getVideogameByName(search));

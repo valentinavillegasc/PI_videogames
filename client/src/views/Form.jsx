@@ -87,12 +87,14 @@ function Form() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
     axios
       .post("http://localhost:3001/videogames/", form)
       .then((res) => alert("Created!"))
       .catch((err) => alert(err));
     navigate("/home");
   };
+
   return (
     <div>
       <form className={style.formulario} onSubmit={handleSubmit}>

@@ -9,6 +9,7 @@ import store from "./redux/store";
 
 ReactDOM.render(
   <Provider store={store}>
+    {/* conexion con store */}
     <BrowserRouter>
       <App />
     </BrowserRouter>

@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
 import style from "./Estilos/NavBar.module.css";
 
-/* import logo from "../utils/"; */
 function NavBar() {
   return (
     <div className={style.navBar}>

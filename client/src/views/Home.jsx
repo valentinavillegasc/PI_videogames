@@ -25,10 +25,13 @@ function Home() {
   //paginado
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(15);
-  const indexOfLastItem = currentPage * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = videogames.slice(indexOfFirstItem, indexOfLastItem);
+
+  //cálculo de indices
+  const indexOfLastItem = currentPage * itemsPerPage; //Calcular el índice del último elemento de la pagina actual
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage; //Calcular el índice del primer elemento de la página actual
+  const currentItems = videogames.slice(indexOfFirstItem, indexOfLastItem); //Se obtienen los elements correspondientes a la página actual
   const paginate = (pageNumber) => {
+    //Función para cambiar la página actual
     setCurrentPage(pageNumber);
   };
 
@@ -115,7 +118,6 @@ function Home() {
       <Pagination
         itemsPerPage={itemsPerPage}
         totalItems={videogames.length}
-        currentPage={currentPage}
         paginate={paginate}
       />
     </div>

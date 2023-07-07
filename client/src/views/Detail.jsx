@@ -8,6 +8,7 @@ import NavBar from "../components/NavBar";
 function Detail() {
   //Hooks
   const game = useSelector((state) => state.videogameDetail);
+  console.log(game);
   const params = useParams();
   const dispatch = useDispatch();
   useEffect(() => {
@@ -58,6 +59,5 @@ function Detail() {
     </div>
   );
 }
-/*  */
 
 export default Detail;
